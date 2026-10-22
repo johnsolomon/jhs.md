@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
   :root {
     --bg: #fbfaf7; --paper: #ffffff; --ink: #1c1f24; --muted: #5d6470;
@@ -68,6 +69,23 @@
   .kv dt { color: var(--muted); }
   .kv dd { margin: 0; }
   footer { margin-top: 32px; font-size: 12px; color: var(--muted); text-align: center; }
+  ol.pubs a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+  ol.pubs a:hover { border-bottom-color: var(--accent); }
+  header { position: relative; }
+  .theme {
+    position: absolute; top: 0; right: 0; width: 32px; height: 32px; padding: 0;
+    border: 1px solid var(--rule); border-radius: 50%; background: transparent; color: var(--muted);
+    cursor: pointer; display: grid; place-items: center;
+  }
+  .theme:hover { color: var(--ink); border-color: var(--muted); }
+  .theme svg { width: 16px; height: 16px; }
+  .theme .sun { display: none; }
+  :root[data-theme="dark"] .theme .sun { display: block; }
+  :root[data-theme="dark"] .theme .moon { display: none; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme .sun { display: block; }
+    :root:not([data-theme="light"]) .theme .moon { display: none; }
+  }
   @media (max-width: 640px) {
     .page { margin: 0; padding: 28px 16px; border: 0; border-radius: 0; }
     h1 { font-size: 28px; }
@@ -84,7 +102,8 @@
     ol.pubs li { margin-bottom: 4px; }
     .sub { margin: 8px 0 4px; }
     .page { margin: 0; padding: 0; border: 0; max-width: none; }
-    .btn, .noprint { display: none !important; }
+    .btn, .noprint, .theme { display: none !important; }
+    ol.pubs a { border: 0; }
     h2 { break-after: avoid; margin: 8px 0 3px; font-size: 12pt; }
     header { padding-bottom: 10px; }
     .entry { margin-bottom: 5px !important; }
@@ -95,6 +114,10 @@
 <body>
 <main class="page">
   <header>
+    <button class="theme noprint" type="button" aria-label="Switch light or dark" onclick="toggleTheme()">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
     <h1>John H. Solomon, MD</h1>
     <p class="role">Nuclear Medicine Resident, Memorial Sloan Kettering Cancer Center</p>
     <div class="contact">
@@ -130,16 +153,16 @@
 
   <h2>Publications</h2>
   <ol class="pubs">
-    <li>Roth S, et al. (Solomon J, third author), Murciano-Goroff Y. <span class="t">Efficacy and Tolerability of Selpercatinib in Germline RET-Altered Medullary Thyroid Cancer: A Case Series.</span> In preparation.</li>
-    <li>Solomon J, Naderi N, Ng Q, Jacobson E. <span class="t">Recognizing Recurrence: History Over Symptoms in Metastatic Melanoma.</span> Cureus. 2024.</li>
-    <li>Samreen I, Solomon J. <span class="t">Unexpected Hemorrhage Post-Paracentesis: Uremic Platelet Dysfunction in an ESRD Patient.</span> Poster, ACP Southern California Chapters. 2024.</li>
+    <li>Roth S, et al. (<b>Solomon J</b>, third author), Murciano-Goroff Y. <span class="t">Efficacy and Tolerability of Selpercatinib in Germline RET-Altered Medullary Thyroid Cancer: A Case Series.</span> In preparation.</li>
+    <li><b>Solomon J</b>, Naderi N, Ng QC, Jacobson E. <a href="https://doi.org/10.7759/cureus.80532"><span class="t">Recognizing Recurrence: History Over Symptoms in Metastatic Melanoma.</span></a> Cureus. 2025;17(3):e80532.</li>
+    <li>Samreen I, <b>Solomon J</b>. <a href="https://webforms.acponline.org/sites/default/files/webform/california_southern_regions_abst/38562/Unexpected%20Hemorrhage%20Post-Paracentesis-%20Unveiling%20Uremic%20Platelet%20Dysfunction%20in%20an%20ESRD%20Patient.pdf"><span class="t">Unexpected Hemorrhage Post-Paracentesis: Uremic Platelet Dysfunction in an ESRD Patient.</span></a> Poster, ACP Southern California Chapters. 2024.</li>
   </ol>
 
   <h2>Case Presentations</h2>
   <ol class="pubs">
-    <li>Solomon J, Ravulapalli J, Stolze K, White F. <span class="t">Kyphoplasty Complications: A Rare Case of Cement Embolism.</span> Cureus. 2024.</li>
-    <li>Solomon J, Porter H, White F. <span class="t">Tuberous Sclerosis Complex.</span> AOCR Case of the Week. 2024.</li>
-    <li>Solomon J, Schaefer C, Onyi S. <span class="t">Focal Nodular Hyperplasia.</span> AOCR Case of the Week. 2024.</li>
+    <li><b>Solomon J</b>, Ravulapalli J, Stolze K, White F. <span class="t">Kyphoplasty Complications: A Rare Case of Cement Embolism.</span> Cureus. 2024.</li>
+    <li><b>Solomon J</b>, Porter H, White F. <span class="t">Tuberous Sclerosis Complex.</span> AOCR Case of the Week. 2024.</li>
+    <li><b>Solomon J</b>, Schaefer C, Onyi S. <span class="t">Focal Nodular Hyperplasia.</span> AOCR Case of the Week. 2024.</li>
   </ol>
 
   <h2>Software</h2>
@@ -173,5 +196,12 @@
   </dl>
 
 </main>
+<script>
+function toggleTheme(){
+  var r=document.documentElement, cur=r.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  var next=cur==='dark'?'light':'dark'; r.dataset.theme=next;
+  try{localStorage.setItem('theme',next)}catch(e){}
+}
+</script>
 </body>
 </html>
