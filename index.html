@@ -4,9 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>John H. Solomon, MD — Nuclear Medicine, Memorial Sloan Kettering</title>
-<meta name="description" content="John H. Solomon, MD — nuclear medicine resident at Memorial Sloan Kettering Cancer Center. Theranostics, radiopharmaceutical therapy and PET/CT. CV, publications and contact.">
+<meta name="description" content="John H. Solomon, MD — nuclear medicine physician in training at Memorial Sloan Kettering Cancer Center, completing residency June 2028. Theranostics, radiopharmaceutical therapy, PET/CT and cardiac PET. CV, publications, clinical software and contact.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://jhs.md/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%231f4e79%22/%3E%3Ctext x=%2232%22 y=%2243%22 font-family=%22Georgia,serif%22 font-size=%2230%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22%3EJS%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#1f4e79">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="John H. Solomon, MD — Nuclear Medicine, Memorial Sloan Kettering">
 <meta property="og:description" content="Nuclear medicine resident at Memorial Sloan Kettering Cancer Center. Theranostics, radiopharmaceutical therapy and PET/CT.">
@@ -32,6 +34,7 @@
  "url": "https://jhs.md/",
  "email": "mailto:mail@jhs.md",
  "jobTitle": "Nuclear Medicine Resident Physician",
+ "description": "Nuclear medicine resident at Memorial Sloan Kettering Cancer Center, completing residency June 2028.",
  "worksFor": {
   "@type": "Hospital",
   "name": "Memorial Sloan Kettering Cancer Center",
@@ -139,6 +142,9 @@
   .kv dt { color: var(--muted); }
   .kv dd { margin: 0; }
   footer { margin-top: 32px; font-size: 12px; color: var(--muted); text-align: center; }
+  .entry .what a.tool { color: var(--accent); text-decoration: none; }
+  .entry .what a.tool:hover { text-decoration: underline; }
+  .entry li b { font-weight: 600; }
   ol.pubs a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
   ol.pubs a:hover { border-bottom-color: var(--accent); }
   header { position: relative; }
@@ -164,12 +170,14 @@
   }
   @media print {
     @page { margin: 10mm 14mm; }
-    :root { --bg:#fff; --paper:#fff; --ink:#000; --muted:#444; --rule:#ccc; --accent:#1f4e79; --accent-soft:#eef2f7; }
-    body { font-size: 9.5pt; line-height: 1.35; background: #fff; }
+    :root, :root[data-theme] { --bg:#fff; --paper:#fff; --ink:#000; --muted:#444; --rule:#ccc; --accent:#1f4e79; --accent-soft:#eef2f7; }
+    body { font-size: 9pt; line-height: 1.3; background: #fff; }
     h1 { font-size: 24pt; }
     .entry { margin-bottom: 8px; }
     .entry ul { margin-top: 2px; }
-    ol.pubs li { margin-bottom: 4px; }
+    ol.pubs li { margin-bottom: 2px; }
+    .entry ul { margin-top: 1px; }
+    .entry li { margin: 0; }
     .sub { margin: 8px 0 4px; }
     .page { margin: 0; padding: 0; border: 0; max-width: none; }
     .btn, .noprint, .theme { display: none !important; }
@@ -189,11 +197,11 @@
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
     </button>
     <h1>John H. Solomon, MD</h1>
-    <p class="role">Nuclear Medicine Resident, Memorial Sloan Kettering Cancer Center</p>
+    <p class="role">Nuclear Medicine Resident, Memorial Sloan Kettering Cancer Center · Completing June 2028</p>
     <div class="contact">
       <a href="mailto:mail@jhs.md">mail@jhs.md</a>
-      <a href="https://www.linkedin.com/in/johnhsolomon">linkedin.com/in/johnhsolomon</a>
-      <a href="https://orcid.org/0009-0002-9045-6417">ORCID 0009-0002-9045-6417</a>
+      <a href="https://www.linkedin.com/in/johnhsolomon">LinkedIn</a>
+      <a href="https://orcid.org/0009-0002-9045-6417">ORCID</a>
       <a class="btn noprint" href="#" onclick="window.print();return false">PDF</a>
     </div>
   </header>
@@ -202,7 +210,12 @@
   <div class="entry">
     <div class="what">Nuclear Medicine Residency</div>
     <div class="when">2025 – 2028</div>
-    <div class="where">Memorial Sloan Kettering Cancer Center, New York, NY</div>
+    <div class="where">Memorial Sloan Kettering Cancer Center, Molecular Imaging and Therapy Service, New York, NY</div>
+    <ul>
+      <li>Radiopharmaceutical therapy: <sup>177</sup>Lu-PSMA-617, <sup>177</sup>Lu-DOTATATE, <sup>131</sup>I, <sup>223</sup>Ra</li>
+      <li>Prepares and presents the weekly Theranostics tumor boards: thyroid, prostate, neuroendocrine</li>
+      <li>Dedicated diagnostic CT training: chest, abdomen, pelvis</li>
+    </ul>
   </div>
   <div class="entry">
     <div class="what">Transitional Year</div>
@@ -210,19 +223,31 @@
     <div class="where">KPC Hemet Global Medical Center, Hemet, CA</div>
   </div>
 
-  <h2>Education</h2>
+  <h2>Licensure &amp; Certification</h2>
+  <dl class="kv">
+    <dt>License</dt><dd>New York and California, expected 2027</dd>
+    <dt>NRC</dt><dd>Authorized User (10 CFR 35.390), expected before residency completion; 200-hour training completed</dd>
+    <dt>ABNM</dt><dd>Board eligible 2028</dd>
+  </dl>
+
+  <h2>Clinical Software</h2>
   <div class="entry">
-    <div class="what">MD</div>
-    <div class="when">2019 – 2024</div>
-    <div class="where">American University of Antigua College of Medicine</div>
+    <div class="what"><a class="tool" href="https://johnsolomon.github.io/cardio/">Myotrace</a></div>
+    <div class="when">2025 – present</div>
+    <div class="where">Cardiac PET reporting and research database, in clinical use.</div>
   </div>
   <div class="entry">
-    <div class="what">BA, Religious Studies</div>
-    <div class="when">2014 – 2018</div>
-    <div class="where">University of California, Irvine</div>
+    <div class="what"><a class="tool" href="https://thyroid.nuc.med">I-131 Activity Planner</a></div>
+    <div class="when">2026 – present</div>
+    <div class="where">Radioiodine activity decision tool built on the 2025 ATA risk framework, with evidence-graded recommendations.</div>
+  </div>
+  <div class="entry">
+    <div class="what">Theranostics service tooling</div>
+    <div class="when">2025 – present</div>
+    <div class="where">Tumor board intake and worklist; Epic documentation templates for Lu-177, Ra-223 and I-131 therapy.</div>
   </div>
 
-  <h2>Publications</h2>
+  <h2>Research</h2>
   <ol class="pubs">
     <li>Roth S, et al. (<b>Solomon J</b>, third author), Murciano-Goroff Y. <span class="t">Efficacy and Tolerability of Selpercatinib in Germline RET-Altered Medullary Thyroid Cancer: A Case Series.</span> In preparation.</li>
     <li><b>Solomon J</b>, Naderi N, Ng QC, Jacobson E. <a href="https://doi.org/10.7759/cureus.80532"><span class="t">Recognizing Recurrence: History Over Symptoms in Metastatic Melanoma.</span></a> Cureus. 2025;17(3):e80532.</li>
@@ -236,35 +261,17 @@
     <li><b>Solomon J</b>, Schaefer C, Onyi S. <span class="t">Focal Nodular Hyperplasia.</span> AOCR Case of the Week. 2024.</li>
   </ol>
 
-  <h2>Software</h2>
+  <h2>Education</h2>
   <div class="entry">
-    <div class="what">Myotrace</div>
-    <div class="when">2025 – present</div>
-    <div class="where">Cardiac PET reporting tool, in clinical use</div>
-  </div>
-
-  <h2>Experience</h2>
-  <div class="entry">
-    <div class="what">Lead Teaching Assistant, Basic Sciences</div>
-    <div class="when">2019 – 2020</div>
+    <div class="what">MD</div>
+    <div class="when">2024</div>
     <div class="where">American University of Antigua College of Medicine</div>
   </div>
   <div class="entry">
-    <div class="what">Research Assistant, Neural Circuit Imaging</div>
-    <div class="when">2015 – 2016</div>
-    <div class="where">UCI School of Medicine</div>
+    <div class="what">BA</div>
+    <div class="when">2018</div>
+    <div class="where">University of California, Irvine</div>
   </div>
-  <div class="entry">
-    <div class="what">Image Processor</div>
-    <div class="when">2008 – 2018</div>
-    <div class="where">SPSP Publications, Santa Monica, CA</div>
-  </div>
-
-  <h2>Honors</h2>
-  <dl class="kv">
-    <dt>2020</dt><dd>Medical Scholars Program Leadership Award</dd>
-    <dt>2019</dt><dd>Dean's Honor Roll</dd>
-  </dl>
 
 </main>
 <script>
